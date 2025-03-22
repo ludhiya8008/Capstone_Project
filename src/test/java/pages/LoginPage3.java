@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,37 +10,38 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
 public class LoginPage3 {
-	
-	    WebDriver driver;
-	    WebDriverWait wait;
+    WebDriver driver;
+    WebDriverWait wait;
 
-	    @FindBy(id = "email")
-	    private WebElement emailField;
+    public LoginPage3(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Wait up to 10 seconds
+    }
 
-	    @FindBy(id = "pass")
-	    private WebElement passwordField;
+    public void enterEmail(String email) {
+        WebElement emailField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
+        emailField.sendKeys(email);
+    }
 
-	    @FindBy(id = "send2")
-	    private WebElement signInButton;
+    public void enterPassword(String password) {
+        WebElement passwordField = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pass")));
+        passwordField.sendKeys(password);
+    }
 
-	    public LoginPage3(WebDriver driver) {
-	        this.driver = driver;
-	        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	        PageFactory.initElements(driver, this);
-	    }
+    public void clickSignIn() {
+        WebElement signInButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("send2")));
+        signInButton.click();
+    }
 
-	    public void enterEmail(String email) {
-	        wait.until(ExpectedConditions.visibilityOf(emailField)).sendKeys(email);
-	    }
+    
 
-	    public void enterPassword(String password) {
-	        wait.until(ExpectedConditions.visibilityOf(passwordField)).sendKeys(password);
-	    }
-
-	    public void clickSignIn() {
-	        wait.until(ExpectedConditions.elementToBeClickable(signInButton)).click();
-	    }
-
-		
-	}
+   
+}

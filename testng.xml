@@ -8,7 +8,10 @@
         <parameter name="password" value="Sampath@123" />
 
         <classes>
+        <class name="tests.CreateAnAccount"/>
+            <class name="tests.LoginTest"/>
             <class name="tests.MagentoTest" />
+            
         </classes>
     </test>
 </suite>
