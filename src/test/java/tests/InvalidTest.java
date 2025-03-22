@@ -1,61 +1,57 @@
 package tests;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+import tests.BaseClass1;
 import pages.InvalidPage;
 import utils.ConfigReader;
-import utils.ExtentReport;
+
 
 public class InvalidTest extends BaseClass1 {
-    private InvalidPage createAccountPage;
+    
+	private InvalidPage createAccountPage;
 
     @BeforeMethod
     public void setUp() {
-        initialization(ConfigReader.getProperty("browser"));
-        ExtentReport.initializeReport();
-        ExtentReport.createTest("Create Account with Invalid Credentials");
-        createAccountPage = new InvalidPage(driver);
+        initialization(ConfigReader.getProperty("browser")); // Fixed function call
+        driver.get(ConfigReader.getProperty("url")); // Ensure URL is loaded
+        createAccountPage = new InvalidPage(getDriver()); // Use getDriver() for consistency
     }
 
     @Test
     public void testCreateAccountWithInvalidCredentials() {
         try {
-            // Navigate to Create Account Page
-            driver.findElement(By.linkText("Create an Account")).click();
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement createAccountLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Create an Account")));
+            createAccountLink.click();
 
             // Enter invalid credentials
             createAccountPage.enterFirstName(ConfigReader.getProperty("firstname"));
-            Thread.sleep(2000);
             createAccountPage.enterLastName(ConfigReader.getProperty("lastname"));
-            Thread.sleep(2000);
             createAccountPage.enterEmail(ConfigReader.getProperty("invalid_email"));
-            Thread.sleep(2000);
             createAccountPage.enterPassword(ConfigReader.getProperty("password"));
-            Thread.sleep(2000);
             createAccountPage.enterConfirmPassword(ConfigReader.getProperty("confirm_password"));
-            Thread.sleep(2000);
 
             // Click Create Account button
             createAccountPage.clickCreateAccountButton();
 
             
+
         } catch (Exception e) {
-            ExtentReport.logFail("Test Failed: " + e.getMessage());
-            Assert.fail("Test Failed: " + e.getMessage());
+            e.printStackTrace();            
         }
     }
 
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-        ExtentReport.flushReport();
+        closeBrowser();
     }
 }

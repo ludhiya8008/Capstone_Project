@@ -9,7 +9,7 @@ public class ConfigReader {
 
     static {
         try {
-            FileInputStream fis = new FileInputStream("src/test/java/data/data.properties");
+            FileInputStream fis = new FileInputStream("C:\\Users\\sampa\\eclipse-workspace\\Project_Luma\\src\\test\\java\\data\\data.properties");
             properties.load(fis);
         } catch (IOException e) {
             throw new RuntimeException("Error loading properties file: " + e.getMessage());

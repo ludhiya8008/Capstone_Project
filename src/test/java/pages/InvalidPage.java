@@ -1,81 +1,88 @@
 package pages;
 
-import java.io.File;
-import java.io.IOException;
+
 import java.time.Duration;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class InvalidPage {
-    private WebDriver driver;
+    WebDriver driver;
+    WebDriverWait wait;
 
-    // Locators
-    By firstNameField = By.id("firstname");
-    By lastNameField = By.id("lastname");
-    By emailField = By.name("email");
-    By passwordField = By.id("password");
-    By confirmPasswordField = By.id("password-confirmation");
-    By createAccountButton = By.xpath("//button[@class='action submit primary']");
+    @FindBy(xpath = "//div[contains(@class,'message-error')]")
+    private WebElement errorMessage;
+
+    @FindBy(id = "firstname")
+    private WebElement firstNameField;
+
+    @FindBy(id = "lastname")
+    private WebElement lastNameField;
+
+    @FindBy(id = "email_address")
+    private WebElement emailField;
+
+    @FindBy(id = "password")
+    private WebElement passwordField;
+
+    @FindBy(id = "password-confirmation")
+    private WebElement confirmPasswordField;
+
    
 
     // Constructor
     public InvalidPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        PageFactory.initElements(driver, this);
     }
 
-    // Methods
     public void enterFirstName(String firstName) {
-        driver.findElement(firstNameField).sendKeys(firstName);
+        firstNameField.clear();
+        firstNameField.sendKeys(firstName);
     }
 
     public void enterLastName(String lastName) {
-        driver.findElement(lastNameField).sendKeys(lastName);
+        lastNameField.clear();
+        lastNameField.sendKeys(lastName);
     }
 
     public void enterEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
+        emailField.clear();
+        emailField.sendKeys(email);
     }
 
     public void enterPassword(String password) {
-        driver.findElement(passwordField).sendKeys(password);
+        passwordField.clear();
+        passwordField.sendKeys(password);
     }
 
     public void enterConfirmPassword(String confirmPassword) {
-        driver.findElement(confirmPasswordField).sendKeys(confirmPassword);
+        confirmPasswordField.clear();
+        confirmPasswordField.sendKeys(confirmPassword);
     }
 
     public void clickCreateAccountButton() {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(createAccountButton));
+    	WebElement createAccountLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Create an Account")));
+    	Actions actions = new Actions(driver);
+    	actions.moveToElement(createAccountLink).click().perform();
 
-            // Scroll the element into view
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-            // Click the element
-            element.click();
-        } catch (Exception e) {
-            // Log the error and take a screenshot
-            System.out.println("Error clicking Create Account button: " + e.getMessage());
-            takeScreenshot("clickCreateAccountButton_error");
-            throw e;
-        }
     }
 
-    private void takeScreenshot(String fileName) {
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    
+
+    // Get the actual error message text
+    public String getErrorMessage() {
         try {
-            FileUtils.copyFile(screenshot, new File("screenshots/" + fileName + ".png"));
-        } catch (IOException e) {
-            System.out.println("Failed to take screenshot: " + e.getMessage());
+            return errorMessage.getText();
+        } catch (Exception e) {
+            return "No error message displayed.";
         }
     }
 }

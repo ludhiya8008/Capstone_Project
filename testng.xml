@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Magento Suite">
+    
     <test name="Magento Login and Add to Cart Test">
         <parameter name="browser" value="chrome" />
         <parameter name="url" value="https://magento.softwaretestingboard.com/customer/account/login/" />
@@ -8,10 +9,17 @@
         <parameter name="password" value="Sampath@123" />
 
         <classes>
-        <class name="tests.CreateAnAccount"/>
-            <class name="tests.LoginTest"/>
+            <class name="tests.CreateAnAccount" />
+            <class name="tests.LoginTest" />
             <class name="tests.MagentoTest" />
-            
         </classes>
     </test>
+
+    <!-- Cucumber Runner Test -->
+    <test name="Cucumber Invalid Login Test">
+        <classes>
+            <class name="Runner.invalidRunner" />
+        </classes>
+    </test>
+
 </suite>

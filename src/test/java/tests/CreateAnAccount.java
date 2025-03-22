@@ -60,7 +60,7 @@ public class CreateAnAccount {
 
 	            WebElement email = driver.findElement(By.id("email_address"));
 	            email.sendKeys("ludhiya1011@gmail.com");
-	            test.log(Status.INFO, "Entered email: ludhiya1013@gmail.com");
+	            test.log(Status.INFO, "Entered email: ludhiya1014@gmail.com");
 
 	            WebElement password = driver.findElement(By.id("password"));
 	            password.sendKeys("Sampath@123");

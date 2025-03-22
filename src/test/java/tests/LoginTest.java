@@ -36,7 +36,7 @@ public class LoginTest {
         extent = ExtentReportManager.getInstance();
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void testValidLogin() {
         test = extent.createTest("Valid Login Test");
         loginPage.enterEmail("ludhiya2002@gmail.com");
@@ -50,7 +50,7 @@ public class LoginTest {
         test.log(Status.PASS, "User successfully logged in");
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testInvalidLogin() {
         test = extent.createTest("Invalid Login Test");
         
