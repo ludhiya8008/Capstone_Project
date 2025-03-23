@@ -22,4 +22,11 @@
         </classes>
     </test>
 
+    <!-- Cucumber Checkout Runner Test -->
+    <test name="Cucumber Checkout Test">
+        <classes>
+            <class name="Runner.checkoutRunner" />
+        </classes>
+    </test>
+
 </suite>

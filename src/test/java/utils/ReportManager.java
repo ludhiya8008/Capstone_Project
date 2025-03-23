@@ -16,7 +16,7 @@ public class ReportManager {
     // Initialize the Extent Report
     public static void initializeReport() {
         if (extent == null) {
-            ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/ExtentReport.html");
+            ExtentSparkReporter htmlReporter = new ExtentSparkReporter("target/productDisplayed.html");
             htmlReporter.config().setDocumentTitle("Automation Report");
             htmlReporter.config().setReportName("Magento Automation Testing");
             htmlReporter.config().setTheme(Theme.STANDARD);

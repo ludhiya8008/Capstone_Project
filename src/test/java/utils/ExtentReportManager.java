@@ -8,9 +8,10 @@ public class ExtentReportManager {
 
     public static ExtentReports getInstance() {
         if (extent == null) {
-            ExtentSparkReporter spark = new ExtentSparkReporter("reports/AddToCart.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter("reports/MyCart.html");
             extent = new ExtentReports();
             extent.attachReporter(spark);
+            
         }
         return extent;
     }

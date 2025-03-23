@@ -1,7 +1,6 @@
 package tests;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,7 +40,7 @@ public class ProductPage {
 
 		    //Using xpath(locators) for firsthoodie, size, and then add to cart
 		    public void selectFirstHoodie() {
-		        WebElement firstHoodie = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(@class, 'product-item-link')])[1]")));
+		        WebElement firstHoodie = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(@class, 'product-item-link')])[3]")));
 		        firstHoodie.click();
 		    }
 
