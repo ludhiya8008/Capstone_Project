@@ -7,12 +7,37 @@
     <parameter name="url" value="https://magento.softwaretestingboard.com/customer/account/login/"/>
     <parameter name="email" value="ludhiya2002@gmail.com"/>
     <classes>
+      <class name="tests.MultipleProducts">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="testAddRandomWomenHoodiesToCartAndCheckout"/>
+        </methods>
+      </class> <!-- tests.MultipleProducts -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="testValidLogin"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.CreateAnAccount">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDownReport"/>
+          <include name="setUp"/>
+          <include name="setUpReport"/>
+          <include name="testAccountCreation"/>
+        </methods>
+      </class> <!-- tests.CreateAnAccount -->
       <class name="tests.MagentoTest">
         <methods>
-          <include name="testAddToCart"/>
-          <include name="testLogin"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testAddToCart"/>
+          <include name="testLogin"/>
         </methods>
       </class> <!-- tests.MagentoTest -->
     </classes>

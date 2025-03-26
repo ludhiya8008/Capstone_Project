@@ -2,24 +2,30 @@ package StepDef;
 
 
 
-import tests.BaseClass3;
-import pages.Loginpage2;
-import utils.ConfigReader;
-import utils.ReportManager;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.*;
-
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pages.Loginpage2;
+import tests.BaseClass3;
+import utils.ConfigReader;
+import utils.ReportManager;
 
 public class invalidLogin {
 
     private WebDriver driver;
     private Loginpage2 loginpage2;
+    ExtentReports extent;
+    ExtentTest test;
 
     @Before
     public void setup() {
@@ -55,7 +61,7 @@ public class invalidLogin {
 
     @Then("User should see an error message")
     public void user_should_see_an_error_message() throws IOException {
-       
+          
     }
 
     @After

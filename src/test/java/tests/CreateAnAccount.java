@@ -15,25 +15,25 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class CreateAnAccount {
+public class CreateAnAccount{
 
 	    private WebDriver driver;
 	    private ExtentReports extent;
 	    private ExtentTest test;
 
+	    // runs once before any tests in the suite are executed.
 	    @BeforeSuite
 	    public void setUpReport() {
 	        // Initialize ExtentReports and attach a SparkReporter
 	        extent = new ExtentReports();
-	        ExtentSparkReporter spark = new ExtentSparkReporter("reports/CreateReport.html");
+	        ExtentSparkReporter spark = new ExtentSparkReporter("reports/CreateAccountReport.html");
 	        extent.attachReporter(spark);
 	    }
 
+	    //Runs before each test method.
 	    @BeforeMethod
 	    public void setUp() {
-	        // Set the path to your WebDriver executable
-	        //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-
+	        
 	        // Initialize the WebDriver
 	    	 driver = new ChromeDriver();
 	         driver.manage().window().maximize();
@@ -59,8 +59,8 @@ public class CreateAnAccount {
 	            test.log(Status.INFO, "Entered last name: Payagalla");
 
 	            WebElement email = driver.findElement(By.id("email_address"));
-	            email.sendKeys("ludhiya1011@gmail.com");
-	            test.log(Status.INFO, "Entered email: ludhiya1014@gmail.com");
+	            email.sendKeys("ludhiya3007@gmail.com");
+	            test.log(Status.INFO, "Entered email: ludhiya3007@gmail.com");
 
 	            WebElement password = driver.findElement(By.id("password"));
 	            password.sendKeys("Sampath@123");
@@ -87,8 +87,10 @@ public class CreateAnAccount {
 	            // Log any exceptions in the report
 	            test.log(Status.FAIL, "Test failed with exception: " + e.getMessage());
 	        }
+	        System.out.println("Create an Account successfully");
 	    }
 
+	    //Runs after each test method.
 	    @AfterMethod
 	    public void tearDown() {
 	        // Close the browser

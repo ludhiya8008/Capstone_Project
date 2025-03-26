@@ -3,14 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Runner.invalidRunner">
+      <class name="tests.Shopping">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="setupSuite"/>
+          <include name="user_searches_for_women_s_hoodies_and_sweatshirts"/>
+          <include name="teardown"/>
+          <include name="user_proceeds_to_checkout"/>
+          <include name="user_views_and_edits_cart"/>
+          <include name="user_places_the_order"/>
+          <include name="user_logs_out"/>
+          <include name="setup"/>
+          <include name="user_removes_product_from_cart"/>
+          <include name="user_enters_shipping_details"/>
+          <include name="user_adds_products_to_cart"/>
         </methods>
-      </class> <!-- Runner.invalidRunner -->
+      </class> <!-- tests.Shopping -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

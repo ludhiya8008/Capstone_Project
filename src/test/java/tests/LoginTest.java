@@ -28,7 +28,7 @@ public class LoginTest {
 
     @BeforeClass
     public void setup() {
-        //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://magento.softwaretestingboard.com/customer/account/login/");
@@ -48,7 +48,10 @@ public class LoginTest {
         Assert.assertTrue(actualTitle.contains(expectedTitle), "Login failed");
 
         test.log(Status.PASS, "User successfully logged in");
+        System.out.println("Logged in successfully");
+    
     }
+   
 
     @Test(enabled = false)
     public void testInvalidLogin() {
@@ -61,7 +64,7 @@ public class LoginTest {
         loginPage.enterEmail("invalid@example.com");
         loginPage.enterPassword("123");
         loginPage.clickSignIn();
-
+    
         
     }
 

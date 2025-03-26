@@ -30,6 +30,8 @@ public class Loginpage2 {
 
     @FindBy(xpath = "//button[@title='Create an Account']")
     private WebElement createAccountButton;
+    
+   
 
 
     public Loginpage2(WebDriver driver) {
@@ -65,6 +67,7 @@ public class Loginpage2 {
     public void clickCreateAccount() {
         createAccountButton.click();
     }
+    
 
    
 

@@ -61,5 +61,7 @@ public class MagentoTest extends BaseClass{
 	        //hoodie will be added to cart
 	        productPage.addToCart();
 	        test.log(Status.PASS, "Item added to cart successfully");
+	        
+	        System.out.println("Added to cart successfully");
 	    }
 	}

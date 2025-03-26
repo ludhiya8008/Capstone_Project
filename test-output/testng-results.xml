@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
+<testng-results ignored="1" total="14" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-23T20:29:12 IST" name="Magento Suite" finished-at="2025-03-23T20:30:01 IST" duration-ms="48435">
+  <suite started-at="2025-03-26T13:02:13 IST" name="Magento Suite" finished-at="2025-03-26T13:04:02 IST" duration-ms="108270">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.invalidRunner@78ffe6dc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.invalidRunner@a82c5f1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-03-23T20:29:12 IST" name="Magento Login and Add to Cart Test" finished-at="2025-03-23T20:29:51 IST" duration-ms="38855">
+    <test started-at="2025-03-26T13:02:13 IST" name="Magento Login and Add to Cart Test" finished-at="2025-03-26T13:03:50 IST" duration-ms="96841">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@55b0dcab]" started-at="2025-03-23T20:29:28 IST" name="setup" finished-at="2025-03-23T20:29:34 IST" duration-ms="6211" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@638ef7ed]" started-at="2025-03-26T13:02:28 IST" name="setup" finished-at="2025-03-26T13:02:32 IST" duration-ms="3821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@55b0dcab]" started-at="2025-03-23T20:29:34 IST" name="testValidLogin" finished-at="2025-03-23T20:29:37 IST" duration-ms="3600" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@638ef7ed]" started-at="2025-03-26T13:02:32 IST" name="testValidLogin" finished-at="2025-03-26T13:02:38 IST" duration-ms="5739" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@55b0dcab]" started-at="2025-03-23T20:29:37 IST" name="tearDown" finished-at="2025-03-23T20:29:38 IST" duration-ms="640" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@638ef7ed]" started-at="2025-03-26T13:02:38 IST" name="tearDown" finished-at="2025-03-26T13:02:39 IST" duration-ms="1049" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:0, instance:tests.LoginTest@55b0dcab] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:0, instance:tests.LoginTest@638ef7ed] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@55b0dcab]" started-at="2025-03-23T20:29:38 IST" name="closeBrowser" finished-at="2025-03-23T20:29:39 IST" duration-ms="531" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@638ef7ed]" started-at="2025-03-26T13:02:39 IST" name="closeBrowser" finished-at="2025-03-26T13:02:40 IST" duration-ms="621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.MagentoTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:tests.MagentoTest@23348b5d]" started-at="2025-03-23T20:29:39 IST" name="setup" finished-at="2025-03-23T20:29:44 IST" duration-ms="5461" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:tests.MagentoTest@536dbea0]" started-at="2025-03-26T13:02:40 IST" name="setup" finished-at="2025-03-26T13:02:45 IST" duration-ms="5742" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
             <param index="1">
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.MagentoTest@23348b5d]" started-at="2025-03-23T20:29:44 IST" name="testLogin" finished-at="2025-03-23T20:29:47 IST" duration-ms="2887" status="PASS">
+        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:tests.MagentoTest@536dbea0]" started-at="2025-03-26T13:02:45 IST" name="testLogin" finished-at="2025-03-26T13:02:49 IST" duration-ms="3221" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,48 +67,90 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="testAddToCart()[pri:0, instance:tests.MagentoTest@23348b5d]" started-at="2025-03-23T20:29:47 IST" name="testAddToCart" finished-at="2025-03-23T20:29:51 IST" depends-on-methods="tests.MagentoTest.testLogin" duration-ms="3718" status="PASS">
+        <test-method signature="testAddToCart()[pri:0, instance:tests.MagentoTest@536dbea0]" started-at="2025-03-26T13:02:49 IST" name="testAddToCart" finished-at="2025-03-26T13:02:52 IST" depends-on-methods="tests.MagentoTest.testLogin" duration-ms="3761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MagentoTest@23348b5d]" started-at="2025-03-23T20:29:51 IST" name="tearDown" finished-at="2025-03-23T20:29:51 IST" duration-ms="574" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MagentoTest@536dbea0]" started-at="2025-03-26T13:02:52 IST" name="tearDown" finished-at="2025-03-26T13:02:54 IST" duration-ms="1616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.MagentoTest -->
       <class name="tests.CreateAnAccount">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CreateAnAccount@7d20d0b]" started-at="2025-03-23T20:29:12 IST" name="setUp" finished-at="2025-03-23T20:29:20 IST" duration-ms="7041" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CreateAnAccount@222a59e6]" started-at="2025-03-26T13:02:14 IST" name="setUp" finished-at="2025-03-26T13:02:20 IST" duration-ms="5751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAccountCreation()[pri:0, instance:tests.CreateAnAccount@7d20d0b]" started-at="2025-03-23T20:29:20 IST" name="testAccountCreation" finished-at="2025-03-23T20:29:27 IST" duration-ms="7477" status="PASS">
+        <test-method signature="testAccountCreation()[pri:0, instance:tests.CreateAnAccount@222a59e6]" started-at="2025-03-26T13:02:20 IST" name="testAccountCreation" finished-at="2025-03-26T13:02:28 IST" duration-ms="8196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccountCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateAnAccount@7d20d0b]" started-at="2025-03-23T20:29:27 IST" name="tearDown" finished-at="2025-03-23T20:29:28 IST" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CreateAnAccount@222a59e6]" started-at="2025-03-26T13:02:28 IST" name="tearDown" finished-at="2025-03-26T13:02:28 IST" duration-ms="459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CreateAnAccount -->
+      <class name="tests.Shopping">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:02:54 IST" name="setup" finished-at="2025-03-26T13:03:03 IST" duration-ms="8651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="user_searches_for_women_s_hoodies_and_sweatshirts()[pri:1, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:03 IST" name="user_searches_for_women_s_hoodies_and_sweatshirts" finished-at="2025-03-26T13:03:08 IST" duration-ms="5098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_searches_for_women_s_hoodies_and_sweatshirts -->
+        <test-method signature="user_adds_products_to_cart()[pri:2, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:08 IST" name="user_adds_products_to_cart" finished-at="2025-03-26T13:03:26 IST" duration-ms="18051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_adds_products_to_cart -->
+        <test-method signature="user_views_and_edits_cart()[pri:3, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:26 IST" name="user_views_and_edits_cart" finished-at="2025-03-26T13:03:29 IST" duration-ms="3699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_views_and_edits_cart -->
+        <test-method signature="user_removes_product_from_cart()[pri:4, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:29 IST" name="user_removes_product_from_cart" finished-at="2025-03-26T13:03:33 IST" duration-ms="3558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_removes_product_from_cart -->
+        <test-method signature="user_proceeds_to_checkout()[pri:5, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:33 IST" name="user_proceeds_to_checkout" finished-at="2025-03-26T13:03:37 IST" duration-ms="4043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_proceeds_to_checkout -->
+        <test-method signature="user_enters_shipping_details()[pri:6, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:37 IST" name="user_enters_shipping_details" finished-at="2025-03-26T13:03:41 IST" duration-ms="3612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_enters_shipping_details -->
+        <test-method signature="user_places_the_order()[pri:7, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:41 IST" name="user_places_the_order" finished-at="2025-03-26T13:03:48 IST" duration-ms="7378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_places_the_order -->
+        <test-method signature="user_logs_out()[pri:8, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:48 IST" name="user_logs_out" finished-at="2025-03-26T13:03:50 IST" duration-ms="1576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_logs_out -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.Shopping@47c81abf]" started-at="2025-03-26T13:03:50 IST" name="teardown" finished-at="2025-03-26T13:03:50 IST" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.Shopping -->
     </test> <!-- Magento Login and Add to Cart Test -->
-    <test started-at="2025-03-23T20:29:51 IST" name="Cucumber Invalid Login Test" finished-at="2025-03-23T20:30:01 IST" duration-ms="9503">
+    <test started-at="2025-03-26T13:03:50 IST" name="Cucumber Invalid Login Test" finished-at="2025-03-26T13:04:02 IST" duration-ms="11339">
       <class name="Runner.invalidRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.invalidRunner@78ffe6dc]" started-at="2025-03-23T20:29:51 IST" name="setUpClass" finished-at="2025-03-23T20:29:52 IST" duration-ms="1049" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.invalidRunner@a82c5f1]" started-at="2025-03-26T13:03:50 IST" name="setUpClass" finished-at="2025-03-26T13:03:51 IST" duration-ms="1055" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6c17c0f8]]>
+                <![CDATA[org.testng.TestRunner@1e471884]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:Runner.invalidRunner@78ffe6dc]" started-at="2025-03-23T20:29:52 IST" name="setupSuite" finished-at="2025-03-23T20:29:52 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:Runner.invalidRunner@a82c5f1]" started-at="2025-03-26T13:03:51 IST" name="setupSuite" finished-at="2025-03-26T13:03:51 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.invalidRunner@78ffe6dc]" started-at="2025-03-23T20:29:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-23T20:30:01 IST" duration-ms="8387" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.invalidRunner@a82c5f1]" started-at="2025-03-26T13:03:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-26T13:04:02 IST" duration-ms="10225" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -124,23 +166,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.invalidRunner@78ffe6dc]" started-at="2025-03-23T20:30:01 IST" name="tearDownClass" finished-at="2025-03-23T20:30:01 IST" duration-ms="43" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.invalidRunner@a82c5f1]" started-at="2025-03-26T13:04:02 IST" name="tearDownClass" finished-at="2025-03-26T13:04:02 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- Runner.invalidRunner -->
-    </test> <!-- Cucumber Invalid Login Test -->
-    <test started-at="2025-03-23T20:30:01 IST" name="Cucumber Checkout Test" finished-at="2025-03-23T20:30:01 IST" duration-ms="1">
       <class name="tests.CreateAnAccount">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:tests.CreateAnAccount@7d20d0b]" started-at="2025-03-23T20:29:12 IST" name="setUpReport" finished-at="2025-03-23T20:29:12 IST" duration-ms="530" status="PASS">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:tests.CreateAnAccount@222a59e6]" started-at="2025-03-26T13:02:13 IST" name="setUpReport" finished-at="2025-03-26T13:02:13 IST" duration-ms="391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:tests.CreateAnAccount@7d20d0b]" started-at="2025-03-23T20:30:01 IST" name="tearDownReport" finished-at="2025-03-23T20:30:01 IST" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:tests.CreateAnAccount@222a59e6]" started-at="2025-03-26T13:04:02 IST" name="tearDownReport" finished-at="2025-03-26T13:04:02 IST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownReport -->
       </class> <!-- tests.CreateAnAccount -->
-    </test> <!-- Cucumber Checkout Test -->
+    </test> <!-- Cucumber Invalid Login Test -->
   </suite> <!-- Magento Suite -->
 </testng-results>
